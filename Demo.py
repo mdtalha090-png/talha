@@ -1,20 +1,15 @@
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
+import random
 
-# Choose operation
-operation = input("Choose operation (+, -, *, /): ")
+# Generate a random number between 1 and 10
+number = random.randint(1, 10)
 
-# Perform calculation
-if operation == "+":
-    print("Result:", num1 + num2)
-elif operation == "-":
-    print("Result:", num1 - num2)
-elif operation == "*":
-    print("Result:", num1 * num2)
-elif operation == "/":
-    if num2 != 0:
-        print("Result:", num1 / num2)
-    else:
-        print("Error! Division by zero.")
+print("Welcome to the Number Guessing Game!")
+print("Guess a number between 1 and 10")
+
+guess = int(input("Enter your guess: "))
+
+if guess == number:
+    print("🎉 Congratulations! You guessed it right!")
 else:
-    print("Invalid operation.")
+    print("❌ Wrong guess!")
+    print("The correct number was:", number)
